@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Detail";
+
+
+}
+
+<h2>@ViewBag.str</h2>
+<div>
+    <h1>@ViewBag.issueNumber</h1>
+    <h2>@Html.Raw(ViewBag.description)</h2>
+    <div>
+        <ul>
+            @{ if (ViewBag.artists.Length > 0)
+               {
+                   foreach (var artist in ViewBag.artists)
+                       {
+                           <li>@artist</li>
+                       }
+                  
+                }
+            }
+        </ul>
+    </div>
+</div>
+

@@ -7,7 +7,19 @@ using System.Threading.Tasks;
 
 namespace ComicBookGallery.Controllers
 {
-    public class ComicBooksGallery : Controller
+    public class ComicBooksController : Controller
     {
+        public ActionResult Detail()
+        {
+            ViewBag.Str = "Detail Page";
+            ViewBag.IssueNumber = 700;
+            ViewBag.Description = "<p>description bababablabal</p>";
+            ViewBag.Artists = new string[]
+            {
+                "script Don Slott",
+                "Pencils Humberto Ramos"
+            }; 
+            return View();
+        }
     }
 }
